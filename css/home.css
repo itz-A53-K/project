@@ -1,0 +1,87 @@
+.btn{
+    margin: 10px;
+    padding: 10px 30px;
+    color: black;
+    background: linear-gradient(120deg,#d5127d, #0b81e9);
+    border: none;
+    border-radius: 15px;
+    transition: .2s ease-in;
+}
+.btn:hover{
+    
+    color: rgb(255, 255, 255);
+}
+
+
+.intro{
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    height: fit-content;
+    /* margin: 40px; */
+    padding: 50px;
+    margin: 10px 0;
+    background-color: rgba(242, 244, 246, 0.175);
+    /* border-radius: 15px; */
+}
+.intro .introLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 55%;
+}
+.intro .introLeft .btnDiv{
+   margin: 20px 0px;
+   height: fit-content;
+}
+.intro .introLeft h1 ,.container .text h1{
+    font-size: 2.5rem;
+}
+.intro .introLeft h2{
+    font-size: 2rem;
+}
+.intro .introLeft h3{
+    font-size: 1.2rem;
+    color: rgb(245, 237, 244);
+    letter-spacing: 2px;
+}
+
+.intro .independance{
+    height: 50vh;
+    margin: 0 5vw;
+}
+
+.container{
+    display: flex; 
+    width: auto;
+    justify-content: space-between;
+    height: fit-content;
+    /* margin: 40px; */
+    margin: 20px;
+    padding: 50px;
+}
+.container div .vEarth{
+    height: 50vh;
+    margin: 0 5vw;
+    
+}
+.container .text{
+    width: 65%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: rgb(0, 0, 0);
+}
+.container .text div{
+    
+    margin: 0 7vw;
+    
+}
+.container .text h2{
+    font-size: 1.5rem;
+}
+.container .text p{
+    font-size: 1.1rem;
+}
+

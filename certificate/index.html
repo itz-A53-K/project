@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Certificate Generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Certificate Generator</h1>
+        <label>
+            Name:
+            <input id="name" type='text'>
+        </label>
+        <label>
+            Date
+            <input id="date" type="date">
+        </label>
+        <a href="#" id="download-btn">Download</a>
+        <canvas id="canvas" height="450px" width="500px"></canvas>
+    </div>
+</body>
+<script >
+    var canvas = document.getElementById('canvas')
+var ctx = canvas.getContext('2d')
+var nameInput = document.getElementById('name')
+var dateInput = document.getElementById('date')
+var downloadBtn = document.getElementById('download-btn')
+
+var image = new Image()
+image.crossOrigin="anonymous";
+image.src = 'vac-cert.jpg'
+image.onload = function () {
+	drawImage()
+}
+
+function drawImage() {
+	// ctx.clearRect(0, 0, canvas.width, canvas.height)
+	ctx.drawImage(image, 0, 0, canvas.width, canvas.height)
+	ctx.font = '30px monotype corsiva'
+	ctx.fillStyle = '#29e'
+	ctx.fillText(nameInput.value, 95, 220)
+	ctx.fillText(dateInput.value, 95, 268)
+	//ctx.fillText("Samir Amin", 95, 220)
+	//ctx.fillText("21/11/2001", 95, 268)
+}
+
+nameInput.addEventListener('input', function () {
+	drawImage()
+})
+
+downloadBtn.addEventListener('click', function () {
+	downloadBtn.href = canvas.toDataURL('image/jpg')
+	downloadBtn.download = 'Certificate - ' + nameInput.value + dateInput.value
+})
+
+</script>
+
+</html>

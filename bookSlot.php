@@ -17,21 +17,21 @@
 <body>
     <section class="container">
         <header>Book Vaccine Slot</header>
-        <form action="#" class="form">
+        <form action="partial/_bookSlot_functional.php" method="post" class="form">
             <div class="input-box">
-                <label>Full Name</label>
-                <input type="text" placeholder="Enter full name" required>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter full name" required>
             </div>
 
             <div class="input-box">
-                <label>Email Address</label>
-                <input type="text" placeholder="Enter email address" required>
+                <label for="email">Email Address</label>
+                <input type="text" id="email" name="email" placeholder="Enter email address" required>
             </div>
 
             <div class="column">
                 <div class="input-box">
-                    <label>Phone Number</label>
-                    <input type="number" placeholder="Enter phone number" required>
+                    <label for="phNo">Phone Number</label>
+                    <input type="number" id="phNo" name="phNo" placeholder="Enter phone number" required>
                 </div>
 
             </div>
@@ -53,16 +53,16 @@
                 </div>
             </div>
             <div class="input-box address">
-                <label>Address</label>
-                <input type="text" placeholder="Enter street name" required>
+                <label for="streetName">Address</label>
+                <input type="text" id="streetName" name="streetName" placeholder="Enter street name" required>
                 <div class="column">
 
-                    <input type="text" placeholder="District" required>
-                    <input type="text" placeholder="Police Station" required>
+                    <input type="text"  id="district" name="district" placeholder="District" required>
+                    <input type="text"id="ps" name="ps" placeholder="Police Station" required>
                 </div>
                 <div class="column">
-                    <input type="text" placeholder="Post Office" required>
-                    <input type="number" placeholder="Enter PIN code" required>
+                    <input type="text" id="po" name="po" placeholder="Post Office" required>
+                    <input type="number"  id="pinc" name="pinc" placeholder="Enter PIN code" required>
                 </div>
                 <div class="select-box">
                     <select>
@@ -72,20 +72,20 @@
                         <option>Voter ID</option>
                     </select>
                 </div>
-                <input type="text" placeholder="Enter ID Proof number">
+                <input type="text" id="id_num" name="id_num" placeholder="Enter ID Proof number">
                 <!-- <input type="text" placeholder="Vaccine Center" required> -->
             </div>
 
             <h3 style="margin:15px 0">Guardian's Details:</h3>
             <div class="input-box">
-                <label>Name</label>
-                <input type="text" placeholder="Enter name" required />
+                <label for="g_name">Name</label>
+                <input type="text"id="g_name" name="g_name" placeholder="Enter name" required />
             </div>
 
             <div class="column">
                 <div class="input-box">
-                    <label>Phone Number</label>
-                    <input type="number" placeholder="Enter phone number" required />
+                    <label for="g_ph">Phone Number</label>
+                    <input type="number" id="g_ph" name="g_ph" placeholder="Enter phone number" required />
                 </div>
                 <!-- <div class="select-box">
                   <select>
@@ -104,7 +104,7 @@
                 <div class="input-box">
                     <label for="vacDist">District</label>
                     <div class="select-box">
-                        <select id="vacDist">
+                        <select id="vacDist" name="vacDist">
                             <option hidden>Select District</option>
                             <option>Nalbari</option>
                             <option>Guwahati</option>
@@ -115,7 +115,7 @@
                 <div class="input-box">
                     <label for="vacCenter">Vaccine center</label>
                     <div class="select-box">
-                        <select id="vacCenter">
+                        <select id="vacCenter" name="vacCenter">
                             <option hidden> Select Vaccine Center</option>
                             <option>Nalbari</option>
                             <option>Guwahati</option>
@@ -124,8 +124,16 @@
                     </div>
                 </div>
                 <div class="input-box">
-                    <label> Date</label>
-                    <input type="date" placeholder="Enter date" required>
+                    <label for="date"> Date</label>
+                    <input type="date"id="date" name="date" placeholder="Enter date" required>
+                </div>
+                <div class="input-box">
+                    <label for="dose">Vaccine dose</label>
+                    <select name="dose" id="dose">
+                        <option hidden>Select vaccine dose</option>
+                        <option value="dose1">1st Dose</option>
+                        <option value="dose2">2nd Dose</option>
+                    </select>
                 </div>
             </div>
             <br>

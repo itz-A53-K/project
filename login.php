@@ -38,7 +38,7 @@
           <center>
           <input type="submit" value="Login">
           </center>
-          <center>Login as <a href="/proj/admin/partial/_adminLogin.php">admin</a></center>
+          <center>Login as <a href="/project/admin/partial/_adminLogin.php">admin</a></center>
           
         </form>
     </div>

@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
         }
     }
 
-    header('Location: /proj/home.php');
+    header('Location: /project/home.php');
 }
 
 ?>

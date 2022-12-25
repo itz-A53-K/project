@@ -7,7 +7,7 @@ if(session_status() != PHP_SESSION_ACTIVE){
     <nav class="navBar" id="navBar">
         <div class="navContainerLeft">
             <a href="/proj/home.php">
-                <img src="/proj/image/logo.jpg" alt="logo" srcset="">
+                <img src="/project/image/logo.jpg" alt="logo" srcset="">
                 <h1 id="foodFest">Covid win</h1>
             </a>
         </div>

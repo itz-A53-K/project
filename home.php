@@ -29,14 +29,14 @@
                     <?php
                       if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']=='true'){
                           echo '
-                          <a class="btn" href="/proj/bookSlot.php">Book Vaccine Slot</a>
+                          <a class="btn" href="/project/bookSlot.php">Book Vaccine Slot</a>
 
                           ';
                       }
                       else{
                         echo '
-                        <a class="btn" href="/proj/regi.php">Register</a>
-                        <a class="btn" href="/proj/login.php">Login</a>
+                        <a class="btn" href="/project/regi.php">Register</a>
+                        <a class="btn" href="/project/login.php">Login</a>
                         ';
                       }
                       ?>
@@ -45,13 +45,13 @@
             </div>
 
             <div>
-                <img class="independance" src="/proj/image/independance.svg" alt="">
+                <img class="independance" src="/project/image/independance.svg" alt="">
             </div>
         </div>
 
         <div class="container">
             <div>
-                <img class="vEarth" src="/proj/image/hero-banner.png" alt="">
+                <img class="vEarth" src="/project/image/hero-banner.png" alt="">
             </div>
             <div class="text">
                 <h1>Need To Know !</h1>
@@ -76,7 +76,7 @@
         </div>
     </section>
 
-    <script src="/proj/js/logout.js"></script>
+    <script src="/project/js/logout.js"></script>
 </body>
 
 </html>

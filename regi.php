@@ -93,7 +93,7 @@
                     <input type="submit" value="Submit">
                 </form>
                 <div>
-                    <h3>Already Have An Account? <a href="/proj/login.php"> Login</a></h3>
+                    <h3>Already Have An Account? <a href="/project/login.php"> Login</a></h3>
                 </div>
 
             </div>

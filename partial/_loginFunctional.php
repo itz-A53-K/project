@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD']) {
     else{
         echo '>1';
     }
-    header('Location: /proj/home.php');
+    header('Location: /project/home.php');
 }
 
 

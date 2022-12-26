@@ -1,8 +1,6 @@
 <!-- by ak -->
 <!DOCTYPE html>
-<!---Coding By CodingLab | www.codinglabweb.com--->
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +9,6 @@
     <!---Custom CSS File--->
     <link rel="stylesheet" href="css/bookSlot.css">
     <link rel="stylesheet" href="css/header_footer.css">
-    <link rel="stylesheet" href="css/utils.css">
 </head>
 
 <body>
@@ -47,7 +44,7 @@
 
                 </div>
                 <div class="gender-box">
-                    <label >Gender</label>
+                    <label>Gender</label>
                     
                         <div class="gender">
                             <input type="radio" id="check-male" name="gender">
@@ -102,20 +99,7 @@
                 </div>
                 <br>
 
-                <h3 style="margin:15px 0">Guardian's Details:</h3>
-                <div class="input-box">
-                    <label for="g_name">Name</label>
-                    <input type="text" id="g_name" name="g_name" placeholder="Enter name" required />
-                </div>
-
-                <div class="column">
-                    <div class="input-box">
-                        <label for="g_ph">Phone Number</label>
-                        <input type="number" id="g_ph" name="g_ph" placeholder="Enter phone number" required />
-                    </div>
-
-                </div>
-                <br>
+                
                 <h3 style="margin:15px 0">Vaccine Center Details</h3>
                 <div>
                     <div class="input-box">

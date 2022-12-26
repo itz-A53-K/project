@@ -1,11 +1,22 @@
 /* Import Google font - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-.container{
+.body {
+  margin-top: 8vh;
+  min-height: 100vh;
+  /* width: 0vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #2980b9, #8e44ad);
+}
+
+.container {
   background-color: white;
   width: fit-content;
   padding: 10px;
   margin: 5vh;
   border-radius: 10px;
-  
+
 }

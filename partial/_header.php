@@ -6,7 +6,7 @@ if(session_status() != PHP_SESSION_ACTIVE){
 <header>
     <nav class="navBar" id="navBar">
         <div class="navContainerLeft">
-            <a href="/proj/home.php">
+            <a href="/project/home.php">
                 <img src="/project/image/logo.jpg" alt="logo" srcset="">
                 <h1 id="foodFest">Covid win</h1>
             </a>

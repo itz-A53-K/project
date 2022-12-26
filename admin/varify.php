@@ -16,6 +16,6 @@
 
     
     </section>
-    <script src="/proj/admin/js/logout.js"></script>
+    <script src="/project/admin/js/logout.js"></script>
 </body>
 </html>

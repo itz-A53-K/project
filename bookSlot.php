@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Registration Form in HTML CSS</title>
     <!---Custom CSS File--->
-    <link rel="stylesheet" href="css/bookSlot.css" />
+    <link rel="stylesheet" href="css/bookSlot.css" >
     <link rel="stylesheet" href="css/header_footer.css">
     <link rel="stylesheet" href="css/utils.css">
 </head>

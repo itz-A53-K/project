@@ -6,8 +6,8 @@ if(session_status() != PHP_SESSION_ACTIVE){
 <header>
     <nav class="navBar" id="navBar">
         <div class="navContainerLeft">
-            <a href="/proj/home.php">
-            <img src="/proj/image/logo.jpg" alt="logo" srcset="">
+            <a href="/project/home.php">
+            <img src="/project/image/logo.jpg" alt="logo" srcset="">
                 <h1 id="foodFest">Covid win</h1>
             </a>
         </div>
@@ -20,13 +20,13 @@ if(session_status() != PHP_SESSION_ACTIVE){
                 echo '
                     <ul>
                         <li class="listItem">
-                            <a class="itemLink" href="/proj/admin/adminHome.php">Home</a>
+                            <a class="itemLink" href="/project/admin/adminHome.php">Home</a>
                         </li>
                         <li class="listItem">
-                            <a class="itemLink" href="/proj/admin/modify.php">Modify</a>
+                            <a class="itemLink" href="/project/admin/modify.php">Modify</a>
                         </li>
                         <li class="listItem">
-                            <a class="itemLink" href="/proj/admin/verify.php">Varify</a>
+                            <a class="itemLink" href="/project/admin/verify.php">Varify</a>
                         </li>
                         
                         <h2>Hi&nbsp; <em>'.$_SESSION['admin_name'].'</em></a></h2>

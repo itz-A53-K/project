@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Registration Form in HTML CSS</title>
     <!---Custom CSS File--->
-    <link rel="stylesheet" href="css/bookSlot.css" >
+    <link rel="stylesheet" href="css/bookSlot.css">
     <link rel="stylesheet" href="css/header_footer.css">
     <link rel="stylesheet" href="css/utils.css">
 </head>
@@ -22,8 +22,11 @@
         header('Location: regi.php');
     }
     else{
+        include('partial/_header.php');
     ?>
-        <section class="container">
+    <section class="body">
+        
+        <div class="container">
             <header>Book Vaccine Slot</header>
             <form action="partial/_bookSlot_functional.php" method="post" class="form">
                 <div class="input-box">
@@ -65,12 +68,12 @@
                     <input type="text" id="streetName" name="streetName" placeholder="Enter street name" required>
                     <div class="column">
 
-                        <input type="text"  id="district" name="district" placeholder="District" required>
-                        <input type="text"id="ps" name="ps" placeholder="Police Station" required>
+                        <input type="text" id="district" name="district" placeholder="District" required>
+                        <input type="text" id="ps" name="ps" placeholder="Police Station" required>
                     </div>
                     <div class="column">
                         <input type="text" id="po" name="po" placeholder="Post Office" required>
-                        <input type="number"  id="pinc" name="pinc" placeholder="Enter PIN code" required>
+                        <input type="number" id="pinc" name="pinc" placeholder="Enter PIN code" required>
                     </div>
                     <div class="select-box">
                         <select>
@@ -87,7 +90,7 @@
                 <h3 style="margin:15px 0">Guardian's Details:</h3>
                 <div class="input-box">
                     <label for="g_name">Name</label>
-                    <input type="text"id="g_name" name="g_name" placeholder="Enter name" required />
+                    <input type="text" id="g_name" name="g_name" placeholder="Enter name" required />
                 </div>
 
                 <div class="column">
@@ -133,7 +136,7 @@
                     </div>
                     <div class="input-box">
                         <label for="date"> Date</label>
-                        <input type="date"id="date" name="date" placeholder="Enter date" required>
+                        <input type="date" id="date" name="date" placeholder="Enter date" required>
                     </div>
                     <div class="input-box">
                         <label for="dose">Vaccine dose</label>
@@ -147,8 +150,9 @@
                 <br>
                 <center><button>Submit</button></center>
             </form>
-        
-        </section>
+
+        </div>
+    </section>
     <?php
     }
     ?>

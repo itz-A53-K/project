@@ -25,7 +25,7 @@
         include('partial/_header.php');
     ?>
     <section class="body">
-        
+
         <div class="container">
             <header>Book Vaccine Slot</header>
             <form action="partial/_bookSlot_functional.php" method="post" class="form">
@@ -110,19 +110,18 @@
                 </div>
                 <br>
 
-<<<<<<< HEAD
-            <h3 style="margin:15px 0">Guardian's Details:</h3>
-            <div class="input-box">
-                <label for="g_name">Name</label>
-                <input type="text"id="g_name" name="g_name" placeholder="Enter name" required />
-            </div>
-
-            <div class="column">
+                <h3 style="margin:15px 0">Guardian's Details:</h3>
                 <div class="input-box">
-                    <label for="g_ph">Phone Number</label>
-                    <input type="number" id="g_ph" name="g_ph" placeholder="Enter phone number" required />
+                    <label for="g_name">Name</label>
+                    <input type="text" id="g_name" name="g_name" placeholder="Enter name" required />
                 </div>
-                <!-- <div class="select-box">
+
+                <div class="column">
+                    <div class="input-box">
+                        <label for="g_ph">Phone Number</label>
+                        <input type="number" id="g_ph" name="g_ph" placeholder="Enter phone number" required />
+                    </div>
+                    <!-- <div class="select-box">
                   <select>
                     <option hidden>Relationship</option>
                     <option>Son</option>
@@ -131,20 +130,8 @@
                     <option>Other's</option>
                   </select>
                 </div> -->
-            </div>
-            <br>
-
-            <h3 style="margin:15px 0">Vaccine Center Details</h3>
-            <div>
-                <div class="input-box">
-                    <label for="vacDist">District</label>
-                    <div class="select-box">
-                        <select id="vacDist" name="vacDist">
-                            <option hidden>Select District</option>
-                            <option>Nalbari</option>
-                            <option>Jorhat</option>
-                            <option>Tezpur</option>
-=======
+                </div>
+                <br>
                 <h3 style="margin:15px 0">Vaccine Center Details</h3>
                 <div>
                     <div class="input-box">
@@ -179,7 +166,7 @@
                             <option hidden>Select vaccine dose</option>
                             <option value="dose1">1st Dose</option>
                             <option value="dose2">2nd Dose</option>
->>>>>>> 39e5ab31f7742e242d00417e7dd32485e6769e15
+                            >>>>>>> 39e5ab31f7742e242d00417e7dd32485e6769e15
                         </select>
                     </div>
                 </div>

@@ -47,8 +47,8 @@
 
                 </div>
                 <div class="gender-box">
-                    <h3>Gender</h3>
-                    <div class="gender-option">
+                    <label >Gender</label>
+                    
                         <div class="gender">
                             <input type="radio" id="check-male" name="gender">
                             <label for="check-male">Male</label>
@@ -61,7 +61,7 @@
                             <input type="radio" id="check-other" name="gender">
                             <label for="check-other">Other</label>
                         </div>
-                    </div>
+                    
                 </div>
                 <div class="input-box address">
                     <label for="streetName">Address</label>

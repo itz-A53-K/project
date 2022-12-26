@@ -107,7 +107,7 @@
                         <select id="vacDist" name="vacDist">
                             <option hidden>Select District</option>
                             <option>Nalbari</option>
-                            <option>Guwahati</option>
+                            <option>Jorhat</option>
                             <option>Tezpur</option>
                         </select>
                     </div>

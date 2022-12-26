@@ -21,10 +21,10 @@ if(session_status() != PHP_SESSION_ACTIVE){
                 echo '
                     <ul>
                         <li class="listItem">
-                            <a class="itemLink" href="/proj/home.php">Home</a>
+                            <a class="itemLink" href="/project/home.php">Home</a>
                         </li>
                         <li class="listItem">
-                            <a class="itemLink" href="/proj/bookSlot.php">Book vaccine slot</a>
+                            <a class="itemLink" href="/project/bookSlot.php">Book vaccine slot</a>
                         </li>
                         
                         <h2>Hi&nbsp; <em>'.$_SESSION['userName'].'</em></a></h2>
@@ -40,14 +40,14 @@ if(session_status() != PHP_SESSION_ACTIVE){
                 echo '
                     <ul>
                         <li class="listItem">
-                            <a class="itemLink" href="/proj/home.php">Home</a>
+                            <a class="itemLink" href="/project/home.php">Home</a>
                         </li>
                         <li class="listItem">
-                            <a class="itemLink" href="/proj/bookSlot.php">Book vaccine slot</a>
+                            <a class="itemLink" href="/project/bookSlot.php">Book vaccine slot</a>
                         </li>
                         
                         <li class="listItem">
-                            <a class="itemLink" href="/proj/regi.php">Registration</a>
+                            <a class="itemLink" href="/project/regi.php">Registration</a>
                         </li>
                         
                     </ul>

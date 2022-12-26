@@ -98,15 +98,7 @@
                         <label for="g_ph">Phone Number</label>
                         <input type="number" id="g_ph" name="g_ph" placeholder="Enter phone number" required />
                     </div>
-                    <!-- <div class="select-box">
-                    <select>
-                        <option hidden>Relationship</option>
-                        <option>Son</option>
-                        <option>Daughter</option>
-                        <option>Wife</option>
-                        <option>Other's</option>
-                    </select>
-                    </div> -->
+
                 </div>
                 <br>
 
@@ -121,15 +113,7 @@
                         <label for="g_ph">Phone Number</label>
                         <input type="number" id="g_ph" name="g_ph" placeholder="Enter phone number" required />
                     </div>
-                    <!-- <div class="select-box">
-                  <select>
-                    <option hidden>Relationship</option>
-                    <option>Son</option>
-                    <option>Daughter</option>
-                    <option>Wife</option>
-                    <option>Other's</option>
-                  </select>
-                </div> -->
+
                 </div>
                 <br>
                 <h3 style="margin:15px 0">Vaccine Center Details</h3>
@@ -166,7 +150,6 @@
                             <option hidden>Select vaccine dose</option>
                             <option value="dose1">1st Dose</option>
                             <option value="dose2">2nd Dose</option>
-                            >>>>>>> 39e5ab31f7742e242d00417e7dd32485e6769e15
                         </select>
                     </div>
                 </div>

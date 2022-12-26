@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
                 $_SESSION['aLoggedin'] = true;
                 $_SESSION['admin_name'] = $row['admin_name'];
                         
-                header('Location: /proj/admin/adminHome.php');
+                header('Location: /project/admin/adminHome.php');
             }
             else{
                 echo 'wrong pass';

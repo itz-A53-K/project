@@ -133,17 +133,18 @@
 .headerBtn {
     /* margin-right: 3vw; */
     font-size: 1rem;
-    background-color: rgba(225, 83, 199, 0.87);
+    background:  linear-gradient(120deg,#ec0dc7, #330be9);
     padding: 7px 10px;
-    border: 1px solid white;
+    border: 3px solid white;
     border-radius: 10px;
     outline: none;
     cursor: pointer;
+    color: white;
 }
 .headerBtn:hover{
-    background-color: violet;
+    /* background-color: violet; */
     border-radius: 10px;
-    border: 1px solid rgb(167, 102, 184);
+    border: 3px solid rgb(167, 102, 184);
 }
 
 

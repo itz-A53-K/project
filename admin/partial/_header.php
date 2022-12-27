@@ -26,7 +26,7 @@ if(session_status() != PHP_SESSION_ACTIVE){
                             <a class="itemLink" href="/project/admin/modify.php">Modify</a>
                         </li>
                         <li class="listItem">
-                            <a class="itemLink" href="/project/admin/verify.php">Varify</a>
+                            <a class="itemLink" href="/project/admin/verify.php">Verify</a>
                         </li>
                         
                         <h2>Hi&nbsp; <em>'.$_SESSION['admin_name'].'</em></a></h2>

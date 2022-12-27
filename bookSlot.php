@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Registration Form in HTML CSS</title>
     <!---Custom CSS File--->
+    <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/bookSlot.css">
     <link rel="stylesheet" href="css/header_footer.css">
 </head>
@@ -20,9 +21,10 @@
         header('Location: regi.php');
     }
     else{
+        include('partial/_dbConnect.php');
         include('partial/_header.php');
         echo '
-        <section class="body_2">
+        <section class="body">
             <div class="container">
                 <h1>Book Vaccine Slot</h1>
                 <form action="partial/_bookSlot_functional.php" method="post" class="form">
@@ -64,7 +66,6 @@
                         <label for="streetName">Address</label>
                         <input type="text" id="streetName" name="streetName" placeholder="Enter street name" required>
                         <div class="column">
-
                             <input type="text" id="district" name="district" placeholder="District" required>
                             <input type="text" id="ps" name="ps" placeholder="Police Station" required>
                         </div>
@@ -84,61 +85,72 @@
                         <!-- <input type="text" placeholder="Vaccine Center" required> -->
                     </div>
 
-                    <h3 style="margin:15px 0">Guardian\'s Details:</h3>
+                    <h3 >Guardian\'s Details:</h3>
                     <div class="input-box">
                         <label for="g_name">Name</label>
                         <input type="text" id="g_name" name="g_name" placeholder="Enter name" required />
                     </div>
 
-                    <div class="column">
-                        <div class="input-box">
-                            <label for="g_ph">Phone Number</label>
-                            <input type="number" id="g_ph" name="g_ph" placeholder="Enter phone number" required />
-                        </div>
-
+                    <div class="input-box">
+                        <label for="g_ph">Phone Number</label>
+                        <input type="number" id="g_ph" name="g_ph" placeholder="Enter phone number" required />
                     </div>
+
+                    
                     <br>
 
 
-                    <h3 style="margin:15px 0">Vaccine Center Details</h3>
+                    <h3 >Vaccine Details</h3>
                     <div>
                         <div class="input-box">
                             <label for="vacDist">District</label>
                             <div class="select-box">
                                 <select id="vacDist" name="vacDist">
                                     <option hidden>Select District</option>
-                                    <option>Nalbari</option>
-                                    <option>Guwahati</option>
-                                    <option>Tezpur</option>
+                                    ';
+                                    $dist_name="SELECT * FROM `vaccine_dist_wise` ";
+                                    $dist_name_result=mysqli_query($conn,$dist_name);
+                                    
+                                    while($row=mysqli_fetch_assoc($dist_name_result)){
+                                        echo  '
+                                        <option value="'.$row["dist_name"].'">'.$row["dist_name"].'</option>
+                                        ';
+                                    }
+
+                                    echo'
                                 </select>
                             </div>
-                        </div>
-                        <div class="input-box">
-                            <label for="vacCenter">Vaccine center</label>
-                            <div class="select-box">
-                                <select id="vacCenter" name="vacCenter">
-                                    <option hidden> Select Vaccine Center</option>
-                                    <option>Nalbari</option>
-                                    <option>Guwahati</option>
-                                    <option>Tezpur</option>
-                                </select>
-                            </div>
-                        </div>
+                        </div>';
+                        // <div class="input-box">
+                        //     <label for="vacCenter">Vaccine center</label>
+                        //     <div class="select-box">
+                        //         <select id="vacCenter" name="vacCenter">
+                        //             <option hidden> Select Vaccine Center</option>
+                        //             ';
+                                    
+
+                        //             echo '
+                        //         </select>
+                        //     </div>
+                        // </div>
+                        echo'
                         <div class="input-box">
                             <label for="date"> Date</label>
                             <input type="date" id="date" name="date" placeholder="Enter date" required>
                         </div>
                         <div class="input-box">
                             <label for="dose">Vaccine dose</label>
-                            <select name="dose" id="dose">
-                                <option hidden>Select vaccine dose</option>
-                                <option value="dose1">1st Dose</option>
-                                <option value="dose2">2nd Dose</option>
-                            </select>
+                            <div class="select-box">
+                                <select name="dose" id="dose">
+                                    <option hidden>Select vaccine dose</option>
+                                    <option value="dose1">1st Dose</option>
+                                    <option value="dose2">2nd Dose</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <br>
-                    <center><button>Submit</button></center>
+                    <center><button class="btn">Book Slot</button></center>
                 </form>
             </div>
         </section>

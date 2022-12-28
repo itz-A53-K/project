@@ -17,6 +17,9 @@
   include 'partial/_header.php';
   ?>
     <section class="body">
+      <?php
+        include 'partial/_alert.php';
+      ?>
         <div class="intro">
             <div class="introLeft">
                 <div>
@@ -84,6 +87,7 @@
         <p>Designed & developed by: Mamud, Mahibul.</p>
     </footer>
     <script src="/project/js/logout.js"></script>
+    <script src="/project/js/script.js"></script>
 </body>
 
 </html>

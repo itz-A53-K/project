@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    
     <?php
     session_start();
     if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']!='true'){
@@ -25,6 +26,10 @@
         include('partial/_header.php');
         echo '
         <section class="body">
+        ';
+        include 'partial/_alert.php';
+
+        echo '
             <div class="container">
                 <h1>Book Vaccine Slot</h1>
                 <form action="partial/_bookSlot_functional.php" method="post" class="form">
@@ -36,6 +41,10 @@
                     <div class="input-box">
                         <label for="email">Email Address</label>
                         <input type="text" id="email" name="email" placeholder="Enter email address" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" placeholder="Enter your age" required>
                     </div>
 
                     <div class="column">
@@ -49,15 +58,15 @@
                         <label>Gender</label>
 
                         <div class="gender">
-                            <input type="radio" id="check-male" name="gender">
+                            <input type="radio" id="check-male" name="gender" value="male">
                             <label for="check-male">Male</label>
                         </div>
                         <div class="gender">
-                            <input type="radio" id="check-female" name="gender">
+                            <input type="radio" id="check-female" name="gender" value="female">
                             <label for="check-female">Female</label>
                         </div>
                         <div class="gender">
-                            <input type="radio" id="check-other" name="gender">
+                            <input type="radio" id="check-other" name="gender" value="other">
                             <label for="check-other">Other</label>
                         </div>
 
@@ -120,20 +129,26 @@
                                     echo'
                                 </select>
                             </div>
-                        </div>';
-                        // <div class="input-box">
-                        //     <label for="vacCenter">Vaccine center</label>
-                        //     <div class="select-box">
-                        //         <select id="vacCenter" name="vacCenter">
-                        //             <option hidden> Select Vaccine Center</option>
-                        //             ';
+                        </div>
+                        <div class="input-box">
+                            <label for="vacCenter">Vaccine center</label>
+                            <div class="select-box">
+                                <select id="vacCenter" name="vacCenter">
+                                    <option hidden> Select Vaccine Center</option>
+                                    ';
+                                    $dist_name="SELECT * FROM `vaccine_dist_wise` ";
+                                    $dist_name_result=mysqli_query($conn,$dist_name);
                                     
+                                    while($row=mysqli_fetch_assoc($dist_name_result)){
+                                        echo  '
+                                        <option value="'.$row["dist_name"].'">'.$row["dist_name"].'</option>
+                                        ';
+                                    }
 
-                        //             echo '
-                        //         </select>
-                        //     </div>
-                        // </div>
-                        echo'
+                                    echo '
+                                </select>
+                            </div>
+                        </div>
                         <div class="input-box">
                             <label for="date"> Date</label>
                             <input type="date" id="date" name="date" placeholder="Enter date" required>
@@ -143,8 +158,8 @@
                             <div class="select-box">
                                 <select name="dose" id="dose">
                                     <option hidden>Select vaccine dose</option>
-                                    <option value="dose1">1st Dose</option>
-                                    <option value="dose2">2nd Dose</option>
+                                    <option value="1">1st Dose</option>
+                                    <option value="2">2nd Dose</option>
                                 </select>
                             </div>
                         </div>
@@ -162,6 +177,7 @@
         <p>Designed & developed by: Mamud, Mahibul.</p>
     </footer>
     <script src="/project/js/logout.js"></script>
+    <script src="/project/js/script.js"></script>
 </body>
 
 </html>

@@ -48,7 +48,7 @@
     ';
     ?>
     <footer>
-        <h1>Copyright &copy; FoodFest.com</h1>
+        <h1>Copyright &copy;Coid win.com</h1>
         <p>Designed & developed by: Mamud, Mahibul.</p>
     </footer>
 </body>

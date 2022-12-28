@@ -104,7 +104,7 @@
                             echo'
                             <form action="/project/partial/_otp_varify.php" method="post" class="form" id="RegForm" onsubmit="return otpValidate()">';
                                 if(isset($_SESSION['alert'])){
-                                    echo ' <h4 style="color:red;">'.$_SESSION['alert'].'</h4>';
+                                    echo ' <h4 style="color:black;">'.$_SESSION['alert'].'</h4>';
                                 }
                             echo'
                                 <div>
@@ -125,7 +125,7 @@
                             echo'
                             <form action="otp_send.php" method="post" class="form" id="RegForm" onsubmit="return validate_reg_cpatchaBox1()">';
                                 if(isset($_SESSION['alert'])){
-                                    echo ' <h4 style="color:red;">'.$_SESSION['alert'].'</h4>';
+                                    echo ' <h4 style="color:black;">'.$_SESSION['alert'].'</h4>';
                                 }
                             echo'
                                 <div>
@@ -135,8 +135,8 @@
                                     <!-- captcha creation -->
                                     <!-- <div id="captcha">
                                     </div> -->
-                                    <input type="text" placeholder="Captcha" id="reg_captchaBox1" required>
                                     <h2 id="captcha"></h2>
+                                    <input type="text" placeholder="Captcha" id="reg_captchaBox1" required>
                                     <!-- <button type="submit">Submit</button> -->
                                 </div>
                                 <button type="submit" class="btnLarge">Send OTP</button>
@@ -156,7 +156,7 @@
     </section>
     <!-- end main -->
     <footer>
-        <h1>Copyright &copy; FoodFest.com</h1>
+        <h1>Copyright &copy;Coid win.com</h1>
         <p>Designed & developed by: Mamud, Mahibul.</p>
     </footer>
     <script src="js/captcha.js"></script>

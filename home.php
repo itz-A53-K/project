@@ -79,7 +79,10 @@
             </div>
         </div>
     </section>
-
+    <footer>
+        <h1>Copyright &copy; FoodFest.com</h1>
+        <p>Designed & developed by: Mamud, Mahibul.</p>
+    </footer>
     <script src="/project/js/logout.js"></script>
 </body>
 

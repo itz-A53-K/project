@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,9 @@
     <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
+
 <body>
-  <?php
+    <?php
   include 'partial/_dbConnect.php';
   include 'partial/_header.php';
  echo ' 
@@ -45,5 +47,10 @@
   </section>
     ';
     ?>
+    <footer>
+        <h1>Copyright &copy; FoodFest.com</h1>
+        <p>Designed & developed by: Mamud, Mahibul.</p>
+    </footer>
 </body>
+
 </html>

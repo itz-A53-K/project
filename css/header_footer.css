@@ -206,3 +206,23 @@ display: none;
     justify-content: end;
     
 }
+
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(30, 213, 125);
+    background-color: rgb(47, 43, 43);
+
+    user-select: none;
+}
+footer h1{
+    padding-top: 10px;
+}
+footer p{
+    padding-bottom: 10px;
+    font-size: .8rem;
+}

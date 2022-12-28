@@ -30,17 +30,17 @@
                                     <br>
                                     <input type="text" name="name" id="name" placeholder="Enter your name">
                                 </div>
-                                <br>
+                                
                                 <div>
                                     <label>Your Age:</label><br>
                                     <input type="number" name="age" id="name" placeholder="How old are you?">
                                 </div>
-                                <br>
+                                
                                 <div>
                                     <label>Phone Number:</label><br>
                                     <input type="number" name="phno" id="phno"  placeholder="Enter your Number" required>
                                 </div>
-                                <br>
+                                
                                 <div>
 
                                     <span>Gender:</span>
@@ -58,7 +58,7 @@
                                     <label for="other">Other</label>
                                     
                                 </div>
-                                <br>
+                                
                                 <div>
                                     ID Proof
                                     <select name="ID_Proof" id="ID Proof">
@@ -67,18 +67,17 @@
                                         <option value="Voter Id">Voter Id</option>
                                     </select><br>
                                     <input type="text" name="ID_no" id="ID_no" placeholder="ID No">
-                                </div><br>
+                                </div>
                                 <div class="address">
                                     <p>Address</p>
                                     <textarea name="address" id="" cols="10" rows="10"></textarea>
                                     <span></span>
-                                </div><br>
+                                </div>
                                 <div>
                                     <label>Email:</label>
                                     <br>
                                     <input type="email" name="email" id="name" placeholder="Enter your valid Email">
                                 </div>
-                                <br>
                                 
                                 <div class="column">
                                 <div class="txt_field">
@@ -86,16 +85,16 @@
                                     <br>
                                     <input type="password" name="pass" placeholder="Enter your Password " required>
                                 </div>
-                                <br>
+                                
                                 <div class="txt_field">
                                     <h2 id="captcha"></h2>
                                     <!-- <label>Captcha</label>
                                     <br> -->
                                     <input type="text" id="cpatchaTextBox"  name="cap"placeholder="Enter captcha " required>
                                 </div>
-                                <br>
                                 
-                                <input type="submit" value="Submit">
+                                
+                                <button type="submit">Submit</button>
                             </form>
                         ';
                     }
@@ -104,7 +103,7 @@
                             echo'
                             <form action="/project/partial/_otp_varify.php" method="post" class="form" id="RegForm" onsubmit="return otpValidate()">';
                                 if(isset($_SESSION['alert'])){
-                                    echo ' <h4 style="color:black;">'.$_SESSION['alert'].'</h4>';
+                                    echo ' <h4 style="color:red;">'.$_SESSION['alert'].'</h4>';
                                 }
                             echo'
                                 <div>
@@ -125,7 +124,7 @@
                             echo'
                             <form action="otp_send.php" method="post" class="form" id="RegForm" onsubmit="return validate_reg_cpatchaBox1()">';
                                 if(isset($_SESSION['alert'])){
-                                    echo ' <h4 style="color:black;">'.$_SESSION['alert'].'</h4>';
+                                    echo ' <h4 style="color:red;">'.$_SESSION['alert'].'</h4>';
                                 }
                             echo'
                                 <div>
@@ -135,7 +134,7 @@
                                     <!-- captcha creation -->
                                     <!-- <div id="captcha">
                                     </div> -->
-                                    <h2 id="captcha"></h2>
+                                    <center><h2 id="captcha"></h2></center>
                                     <input type="text" placeholder="Captcha" id="reg_captchaBox1" required>
                                     <!-- <button type="submit">Submit</button> -->
                                 </div>

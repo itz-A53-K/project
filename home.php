@@ -24,7 +24,7 @@
                 </div>
                 <div>
                     <h3>We are here for you</h3>
-                    <h2>Let's Defeat COVID-19 !</h2>
+                    <h2>Let's Defeat COVID!</h2>
                     <div class="btnDiv">
                     <?php
                       if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']=='true'){
@@ -56,17 +56,21 @@
             <div class="text">
                 <h1>Need To Know !</h1>
                 <div>
-                    <h2>How Virus Spread ?</h2>
+                    <h2>How Virus Spread ?</h2><br>
                     
                     <ul>
                       <li>
                         <h3>Human Contact</h3>
-                      </li>
+                        The pandemic made the world realise the importance of human contact. Touch is the only sense crucial to humans' survival.
+
+                      </li><br>
                       <li>
                         <h3>Air Transmission</h3>
-                      </li>
+                        People can also catch COVID-19 if they breathe in droplets from a person with COVID-19 who coughs out or exhales droplets. This is why it is important to stay more than 1 meter (3 feet) away from a person who is sick.
+                      </li><br>
                       <li>
                         <h3>Contaminated Objects</h3>
+                        It is possible for people to be infected through contact with contaminated surfaces or objects (fomites), but the risk is generally ...
                       </li>
                     </ul>
                     </h2>

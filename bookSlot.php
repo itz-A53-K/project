@@ -75,7 +75,7 @@
                         <label for="streetName">Address</label>
                         <input type="text" id="streetName" name="streetName" placeholder="Enter street name" required>
                         <div class="column">
-                            <input type="text" id="district" name="district" placeholder="District" required>
+                            <input type="text" id="district" name="street name" placeholder="District" required>
                             <input type="text" id="ps" name="ps" placeholder="Police Station" required>
                         </div>
                         <div class="column">

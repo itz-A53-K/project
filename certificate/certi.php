@@ -39,7 +39,7 @@
 
                         <canvas id="canvas" height="450px" width="500px"></canvas>
 
-                         <button id="download_btn" class="btn">Download</button>
+                         <button onClick="download()" id="download_btn" class="btn">Download</button>
                         ';
                     }
                     else{
@@ -66,8 +66,8 @@
 <script>
 var canvas = document.getElementById('canvas')
 var ctx = canvas.getContext('2d')
-var name = document.getElementById('name')
-var downloadBtn = document.getElementById('download_btn')
+// var name = document.getElementById('name')
+// var downloadBtn = document.getElementById('download_btn')
 
 var image = new Image()
 image.crossOrigin = "anonymous";
@@ -109,15 +109,13 @@ function drawImage() {
     ctx.fillText(vacAddress, 225, 382)
 }
 
-// name.addEventListener('input', function() {
-//     drawImage()
-// })
-
-downloadBtn.addEventListener('click', function() {
-    console.log("blaaaaa");
-    downloadBtn.href = canvas.toDataURL('image/jpg')
-    downloadBtn.download = 'Certificate - ' + name.value
-})
+function download() {
+    var name = document.getElementById('name')
+        var anchor = document.createElement('a');
+        anchor.href = canvas.toDataURL('image/png'); // 'image/jpg'
+        anchor.download =  name.value+' vaccination certificate.png';               // 'image.jpg'
+        anchor.click();
+    }
 </script>
 
 </html>

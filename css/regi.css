@@ -53,11 +53,21 @@
   flex-direction: column;
 
 }
+
 .main #Registration div {
   margin: 8px;
 }
+
 .main #Registration .input {
-    width: 30vw;
+  width: 30vw;
+  padding: 6px 10px;
+  border-radius: 5px;
+  color: black;
+  margin: 10px 0;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid black;
+  font-size: .9rem;
 }
 
 
@@ -71,7 +81,7 @@
   width: 40%;
 }
 
-input {
+.form input {
   padding: 6px 10px;
   border-radius: 5px;
   color: black;
@@ -80,7 +90,7 @@ input {
   cursor: pointer;
   border: 1px solid black;
   font-size: .9rem;
-
+  width: 20vw;
 }
 
 form button {

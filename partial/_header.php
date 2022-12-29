@@ -26,6 +26,9 @@ if(session_status() != PHP_SESSION_ACTIVE){
                         <li class="listItem">
                             <a class="itemLink" href="/project/bookSlot.php">Book vaccine slot</a>
                         </li>
+                        <li class="listItem">
+                            <a class="itemLink" href="/project/certificate/certi.php">Download certificate</a>
+                        </li>
                         
                         <h2>Hi&nbsp; <em>'.$_SESSION['userName'].'</em></a></h2>
                         

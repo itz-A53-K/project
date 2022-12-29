@@ -28,20 +28,26 @@
                                 <div>
                                     <label>Name:</label>
                                     <br>
-                                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                                    <input type="text" name="name" id="name" class="input"  placeholder="Enter your name">
                                 </div>
                                 
                                 <div>
                                     <label>Your Age:</label><br>
-                                    <input type="number" name="age" id="name" placeholder="How old are you?">
+                                    <input type="number" name="age" id="name" class="input" placeholder="How old are you?">
                                 </div>
-                                
+                                <div>
+                                    <label>Email:</label>
+                                    <br>
+                                    <input type="email" class="input" value="'.$_SESSION['verifyEmail'].'"  disabled>
+                                    <input type="hidden" class="input" name="email"  value="'.$_SESSION['verifyEmail'].'" >
+
+                                </div>
                                 <div>
                                     <label>Phone Number:</label><br>
-                                    <input type="number" name="phno" id="phno"  placeholder="Enter your Number" required>
+                                    <input type="text" name="phno" id="phno" class="input"  placeholder="Enter your Number" maxlength="10" required>
                                 </div>
                                 
-                                <div>
+                                <div class="genderDiv">
 
                                     <span>Gender:</span>
                                     &nbsp;&nbsp;
@@ -66,31 +72,27 @@
                                         <option value="Pan Card">Pan Card</option>
                                         <option value="Voter Id">Voter Id</option>
                                     </select><br>
-                                    <input type="text" name="ID_no" id="ID_no" placeholder="ID No">
+                                    <input type="text" name="ID_no" id="ID_no" class="input"  placeholder="ID No">
                                 </div>
                                 <div class="address">
                                     <p>Address</p>
-                                    <textarea name="address" id="" cols="10" rows="10"></textarea>
+                                    <textarea name="address" id="" cols="10" rows="10" class="input"></textarea>
                                     <span></span>
                                 </div>
-                                <div>
-                                    <label>Email:</label>
-                                    <br>
-                                    <input type="email" name="email" id="name" placeholder="Enter your valid Email">
-                                </div>
+                                
                                 
                                 <div class="column">
                                 <div class="txt_field">
                                     <label>Password</label>
                                     <br>
-                                    <input type="password" name="pass" placeholder="Enter your Password " required>
+                                    <input type="password" name="pass" class="input" placeholder="Enter your Password " required>
                                 </div>
                                 
                                 <div class="txt_field">
                                     <h2 id="captcha"></h2>
                                     <!-- <label>Captcha</label>
                                     <br> -->
-                                    <input type="text" id="cpatchaTextBox"  name="cap"placeholder="Enter captcha " required>
+                                    <input type="text" id="cpatchaTextBox" class="input"  name="cap"placeholder="Enter captcha " required>
                                 </div>
                                 
                                 
@@ -107,7 +109,7 @@
                                 }
                             echo'
                                 <div>
-                                    <input type="email" class="verifyEmail" name="verifyEmail" placeholder="Enter your email" value="'.$_SESSION['verifyEmail'].'" disabled>
+                                    <input type="email" class="verifyEmail" name="verifyEmail" value="'.$_SESSION['verifyEmail'].'" disabled>
                                 </div>
                                 <div>
                                     <h4 style="color:green;">An OTP has been sent to above Email</h4>
@@ -159,6 +161,7 @@
         <p>Designed & developed by: Mamud, Mahibul.</p>
     </footer>
     <script src="js/captcha.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 

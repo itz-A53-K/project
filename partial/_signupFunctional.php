@@ -13,14 +13,14 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
     $email=$_POST['email'];
     $pass=$_POST['pass'];
 
-    $check_user="SELECT * FROM `users` WHERE ph_No='$phno'";
+    $check_user="SELECT * FROM `users` WHERE userEmail='$email'";
     
     $check_result=mysqli_query($conn,$check_user);
     
     $noOfrows=mysqli_num_rows($check_result);
     
     if($noOfrows>0){
-        $alert= 'Phone No already exist';
+        $alert= 'Email Id already exist';
     }
     else{
         $hash = password_hash($pass,PASSWORD_DEFAULT);
@@ -29,14 +29,15 @@ if ($_SERVER['REQUEST_METHOD']=="POST") {
         $result=mysqli_query($conn,$sql);
         
         if ($result){
-            $alert='succesfull';
+            $alert='Your account has been created succesfully';
 
         }
         else{
-            $alert= 'unsucces';
+            $alert= 'Some error occured . Please try again .';
         }
     }
-
+    session_start();
+    $_SESSION['alert']=$alert;
     header('Location: /project/home.php');
 }
 

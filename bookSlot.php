@@ -136,15 +136,15 @@
                                 <select id="vacCenter" name="vacCenter">
                                     <option hidden> Select Vaccine Center</option>
                                     ';
-                                    $dist_name="SELECT * FROM `vaccine_dist_wise` ";
-                                    $dist_name_result=mysqli_query($conn,$dist_name);
+                                    $center_name="SELECT * FROM `vaccine_dist_wise` ";
+                                    $center_name_result=mysqli_query($conn,$center_name);
                                     
-                                    while($row=mysqli_fetch_assoc($dist_name_result)){
+                                    while($row=mysqli_fetch_assoc($center_name_result)){
                                         echo  '
-                                        <option value="'.$row["dist_name"].'">'.$row["dist_name"].'</option>
+                                        <option value="'.$row["vacCenter"].'">'.$row["vacCenter"].'</option>
                                         ';
                                     }
-
+    
                                     echo '
                                 </select>
                             </div>

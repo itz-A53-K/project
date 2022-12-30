@@ -33,6 +33,7 @@
                       if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']=='true'){
                           echo '
                           <a class="btn" href="/project/bookSlot.php">Book Vaccine Slot</a>
+                          <a class="btn" href="/project/Edit_cancl.php">View Booking</a>
 
                           ';
                       }

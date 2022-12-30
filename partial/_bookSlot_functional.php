@@ -2,6 +2,7 @@
 
 if($_SERVER['REQUEST_METHOD']=="POST"){
     include '_dbConnect.php';
+session_start();
 
     $name=$_POST['name'];
     $email=$_POST['email'];
@@ -20,6 +21,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     $date=$_POST['date'];
     $dose=$_POST['dose'];
     $age=$_POST['age'];
+    $user_id=$_SESSION['user_id'];
 
     $address= "streetName= ".$streetName.", dist= ".$district.", PS= ".$ps.", PO= ".$po.", pinc= ".$pinc ;
 // echo $address;
@@ -28,7 +30,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     $check_slot_num_rows=mysqli_num_rows($check_slot_result);
     //check if slot already booked (corresponding to phno and dose)
     if ($check_slot_num_rows==0){
-        $sql="INSERT INTO `book_slot` ( `name`, `email`, `phNo`, `gender`, `address`, `id_num`, `g_name`, `g_ph`, `vacDist`, `vacCenter`, `date`, `dose`,`age`) VALUES ( '$name', '$email', '$phNo', '$gender', '$address', '$id_num', '$g_name', '$g_ph', '$vacDist', '$vacCenter', '$date', '$dose','$age')";
+        $sql="INSERT INTO `book_slot` ( `name`, `email`, `phNo`, `gender`, `address`, `id_num`, `g_name`, `g_ph`, `vacDist`, `vacCenter`, `date`, `dose`,`age`,`user_id`) VALUES ( '$name', '$email', '$phNo', '$gender', '$address', '$id_num', '$g_name', '$g_ph', '$vacDist', '$vacCenter', '$date', '$dose','$age','$user_id')";
         $result=mysqli_query($conn,$sql);
 
         if ($result) {

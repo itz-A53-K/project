@@ -65,6 +65,8 @@
             ';
         }
     ?>
+    <script src="/project/js/logout.js"></script>
+    <script src="/project/js/script.js"></script>
 </body>
 
 </html>

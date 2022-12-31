@@ -34,7 +34,7 @@ session_start();
         $result=mysqli_query($conn,$sql);
 
         if ($result) {
-            $alert= 'your slot has been booked successfully';
+            $alert= 'Your slot has been booked successfully';
         }
         else{
             $alert= 'slot book error';

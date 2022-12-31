@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    
+
     <?php
     session_start();
     if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']!='true'){
@@ -32,25 +32,25 @@
         echo '
             <div class="container">
                 <h1>Book Vaccine Slot</h1>
-                <form action="partial/_bookSlot_functional.php" method="post" class="form" onsumit="return checkDate()">
+                <form action="partial/_bookSlot_functional.php" method="post" class="form" onsubmit="return checkDate()">
                     <div class="input-box">
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter full name" required>
+                        <input type="text" id="name" name="name" placeholder="Enter full name"  >
                     </div>
 
                     <div class="input-box">
                         <label for="email">Email Address</label>
-                        <input type="text" id="email" name="email" placeholder="Enter email address" required>
+                        <input type="text" id="email" name="email" placeholder="Enter email address"  >
                     </div>
                     <div class="input-box">
                         <label for="age">Age</label>
-                        <input type="number" id="age" name="age" placeholder="Enter your age" required>
+                        <input type="number" id="age" name="age" placeholder="Enter your age"  >
                     </div>
 
                     <div class="column">
                         <div class="input-box">
                             <label for="phNo">Phone Number</label>
-                            <input type="number" id="phNo" name="phNo" placeholder="Enter phone number" required>
+                            <input type="number" id="phNo" name="phNo" placeholder="Enter phone number"  >
                         </div>
 
                     </div>
@@ -73,14 +73,14 @@
                     </div>
                     <div class="input-box address">
                         <label for="streetName">Address</label>
-                        <input type="text" id="streetName" name="streetName" placeholder="Enter street name" required>
+                        <input type="text" id="streetName" name="streetName" placeholder="Enter street name"  >
                         <div class="column">
-                            <input type="text" id="district" name="street name" placeholder="District" required>
-                            <input type="text" id="ps" name="ps" placeholder="Police Station" required>
+                            <input type="text" id="district" name="street name" placeholder="District"  >
+                            <input type="text" id="ps" name="ps" placeholder="Police Station"  >
                         </div>
                         <div class="column">
-                            <input type="text" id="po" name="po" placeholder="Post Office" required>
-                            <input type="number" id="pinc" name="pinc" placeholder="Enter PIN code" required>
+                            <input type="text" id="po" name="po" placeholder="Post Office"  >
+                            <input type="number" id="pinc" name="pinc" placeholder="Enter PIN code"  >
                         </div>
                         <div class="select-box">
                             <select>
@@ -90,19 +90,19 @@
                                 <option>Voter ID</option>
                             </select>
                         </div>
-                        <input type="text" id="id_num" name="id_num" placeholder="Enter ID Proof number">
-                        <!-- <input type="text" placeholder="Vaccine Center" required> -->
+                        <input type="text" id="id_num" name="id_num" placeholder="Enter ID Proof number"  >
+                        <!-- <input type="text" placeholder="Vaccine Center"  > -->
                     </div>
 
                     <h3 >Guardian\'s Details:</h3>
                     <div class="input-box">
                         <label for="g_name">Name</label>
-                        <input type="text" id="g_name" name="g_name" placeholder="Enter name" required />
+                        <input type="text" id="g_name" name="g_name" placeholder="Enter name"   >
                     </div>
 
                     <div class="input-box">
                         <label for="g_ph">Phone Number</label>
-                        <input type="number" id="g_ph" name="g_ph" placeholder="Enter phone number" required />
+                        <input type="number" id="g_ph" name="g_ph" placeholder="Enter phone number"   >
                     </div>
 
                     
@@ -114,7 +114,7 @@
                         <div class="input-box">
                             <label for="vacDist">District</label>
                             <div class="select-box">
-                                <select id="vacDist" name="vacDist">
+                                <select id="vacDist" name="vacDist"  >
                                     <option hidden>Select District</option>
                                     ';
                                     $dist_name="SELECT * FROM `vaccine_dist_wise` ";
@@ -133,8 +133,8 @@
                         <div class="input-box">
                             <label for="vacCenter">Vaccine center</label>
                             <div class="select-box">
-                                <select id="vacCenter" name="vacCenter">
-                                    <option hidden> Select Vaccine Center</option>
+                                <select id="vacCenter" name="vacCenter"  >
+                                    <option hidden>Select Vaccine Center</option>
                                     ';
                                     $center_name="SELECT * FROM `vaccine_dist_wise` ";
                                     $center_name_result=mysqli_query($conn,$center_name);
@@ -151,12 +151,12 @@
                         </div>
                         <div class="input-box">
                             <label for="date"> Date</label>
-                            <input type="date"  name="date" id="givenDateInput" placeholder="Enter date" required>
+                            <input type="date"  name="date" id="date" placeholder="Enter date"  >
                         </div>
                         <div class="input-box">
                             <label for="dose">Vaccine dose</label>
                             <div class="select-box">
-                                <select name="dose" id="dose">
+                                <select name="dose" id="dose"  >
                                     <option hidden>Select vaccine dose</option>
                                     <option value="1">1st Dose</option>
                                     <option value="2">2nd Dose</option>
@@ -165,7 +165,7 @@
                         </div>
                     </div>
                     <br>
-                    <center><button class="btn" id="checkButton">Book Slot</button></center>
+                    <center><button type="submit" class="btn" id="checkButton">Book Slot</button></center>
                 </form>
             </div>
         </section>
@@ -176,21 +176,25 @@
         <h1>Copyright &copy; Covid win.com</h1>
         <p>Designed & developed by: Mamud, Mahibul.</p>
     </footer>
-    <script>
-        function checkDate(){
-const givenDateInput = document.getElementById('givenDateInput');
-      const currentDate = new Date(); // current date and time
-      const givenDate = new Date(givenDateInput.value); // given date
+    <!-- <script>
+        
+        // if(document.)
 
-      if (givenDate < currentDate) {
-        alert('Fuck off')
-        return false;
-      } else {
-        return true;
-      }
-    }
-  
-  </script>
+        function checkDate() {
+            const givenDateInput = document.getElementById('givenDateInput');
+            const currentDate = new Date(); // current date and time
+            const givenDate = new Date(givenDateInput.value); // given date
+            console.log(givenDate);
+            if (givenDate < currentDate) {
+                console.log(blaaaa);
+                alert('Fuck off')
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script> -->
+    <script src="/project/js/bookSlot.js"></script>
     <script src="/project/js/logout.js"></script>
     <script src="/project/js/script.js"></script>
 </body>

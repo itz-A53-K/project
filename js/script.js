@@ -8,3 +8,4 @@ document.querySelector('#closeAlert').addEventListener("click",(e)=>{
         location.reload(true);
 
 })
+

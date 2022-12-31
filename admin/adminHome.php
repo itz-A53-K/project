@@ -29,37 +29,7 @@
 
         echo '
         <div class="container">
-            <div class="titleCard">
-                <div class="sno">S. No.</div>
-                <div class="name">Name</div>
-                <div class="date">Vaccination Date</div>
-                <div class="cname">Center</div>
-                <div class="btndiv">Action</div>
-            </div>
-            ';
-            $user_id=$_SESSION['user_id'];
-            $sql="SELECT * FROM `book_slot` WHERE user_id=$user_id";
-            $result=mysqli_query($conn,$sql);
-            $sNo=0;
-
-            // echo $user_id;
-            while($row=mysqli_fetch_assoc($result)){
-            $sNo=$sNo+1;
-            echo '
-
-            <div class="card">
-                <div class="sno">'.$sNo.'</div>
-                <div class="name">'.$row['name'].'</div>
-                <div class="date">'.$row['date'].'</div>
-                <div class="cname">'.$row['vacCenter'].',&nbsp;'.$row['vacDist'].'</div>
-                <div class="btndiv">
-                    <button class="btn verify" id="">Verify</button>
-                    <button class="btn delete" id="">Cancel</button>
-                </div>
-            </div>
-            ';
-            }
-            echo '
+         
         </div>
     </section>
     ';

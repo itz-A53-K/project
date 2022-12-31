@@ -8,31 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Registration Form in HTML CSS</title>
     <!---Custom CSS File--->
-    <link rel="stylesheet" href="css/utils.css">
-    <link rel="stylesheet" href="css/bookSlot.css">
-    <link rel="stylesheet" href="css/header_footer.css">
+    <!-- <link rel="stylesheet" href="css/utils.css"> -->
+    <link rel="stylesheet" href="css/update.css">
 </head>
 
 <body>
-    
-    <?php
-    session_start();
-    if(!isset($_SESSION['loggedin']) && $_SESSION['loggedin']!='true'){
-        $_SESSION['alert']="Please register first";
-        header('Location: regi.php');
-    }
-    else{
-        include('partial/_dbConnect.php');
-        include('partial/_header.php');
-        echo '
-        <section class="body">
-        ';
-        include 'partial/_alert.php';
-
-        echo '
+         <section class="body">
             <div class="container">
-                <h1>Book Vaccine Slot</h1>
-                <form action="partial/_bookSlot_functional.php" method="post" class="form" onsumit="return checkDate()">
+                <h1>Update page</h1>
+                <form action="partial/_bookSlot_functional.php" method="post" class="form">
                     <div class="input-box">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" placeholder="Enter full name" required>
@@ -116,17 +100,6 @@
                             <div class="select-box">
                                 <select id="vacDist" name="vacDist">
                                     <option hidden>Select District</option>
-                                    ';
-                                    $dist_name="SELECT * FROM `vaccine_dist_wise` ";
-                                    $dist_name_result=mysqli_query($conn,$dist_name);
-                                    
-                                    while($row=mysqli_fetch_assoc($dist_name_result)){
-                                        echo  '
-                                        <option value="'.$row["dist_name"].'">'.$row["dist_name"].'</option>
-                                        ';
-                                    }
-
-                                    echo'
                                 </select>
                             </div>
                         </div>
@@ -135,17 +108,6 @@
                             <div class="select-box">
                                 <select id="vacCenter" name="vacCenter">
                                     <option hidden> Select Vaccine Center</option>
-                                    ';
-                                    $center_name="SELECT * FROM `vaccine_dist_wise` ";
-                                    $center_name_result=mysqli_query($conn,$center_name);
-                                    
-                                    while($row=mysqli_fetch_assoc($center_name_result)){
-                                        echo  '
-                                        <option value="'.$row["vacCenter"].'">'.$row["vacCenter"].'</option>
-                                        ';
-                                    }
-    
-                                    echo '
                                 </select>
                             </div>
                         </div>
@@ -169,30 +131,6 @@
                 </form>
             </div>
         </section>
-    ';
-    }
-    ?>
-    <footer>
-        <h1>Copyright &copy; Covid win.com</h1>
-        <p>Designed & developed by: Mamud, Mahibul.</p>
-    </footer>
-    <script>
-        function checkDate(){
-const givenDateInput = document.getElementById('givenDateInput');
-      const currentDate = new Date(); // current date and time
-      const givenDate = new Date(givenDateInput.value); // given date
-
-      if (givenDate < currentDate) {
-        alert('Fuck off')
-        return false;
-      } else {
-        return true;
-      }
-    }
-  
-  </script>
-    <script src="/project/js/logout.js"></script>
-    <script src="/project/js/script.js"></script>
 </body>
 
 </html>

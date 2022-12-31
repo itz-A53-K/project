@@ -32,7 +32,7 @@
         echo '
             <div class="container">
                 <h1>Book Vaccine Slot</h1>
-                <form action="partial/_bookSlot_functional.php" method="post" class="form" onsumit="return checkDate()">
+                <form action="partial/_bookSlot_functional.php" method="post" class="form" onsubmit="return checkDate()">
                     <div class="input-box">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" placeholder="Enter full name" required>

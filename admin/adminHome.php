@@ -27,14 +27,14 @@
         ';
         include 'partial/_alert_2.php';
 
-        if ($_SERVER['REQUEST_METHOD']) {
-            session_start();
-            include '_dbConnect.php';
+        if ($_SERVER['REQUEST_METHOD']=="POST") {
+           
+            include 'partial/_dbConnect.php';
         
             $loginEmail=$_POST['loginEmail'];
             $loginPass=$_POST['loginPass'];
             $loginConfPass=$_POST['loginConfPass'];
-            
+
             $checkUser="SELECT * FROM `users` WHERE userEmail='$loginEmail'";
             $result=mysqli_query($conn,$checkUser);
             $noOfRows=mysqli_num_rows($result);
@@ -46,7 +46,7 @@
         else{
             
         echo '
-        <form method="post" action="partial/adminHome.php">
+        <form method="post" action="adminHome.php">
         <div class="container">
        <center> <div class="select-box">
         <select>

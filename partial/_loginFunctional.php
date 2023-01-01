@@ -1,5 +1,5 @@
 <?php
-if ($_SERVER['REQUEST_METHOD']) {
+if ($_SERVER['REQUEST_METHOD']=="POST") {
     session_start();
     include '_dbConnect.php';
 

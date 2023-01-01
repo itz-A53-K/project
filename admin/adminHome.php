@@ -28,45 +28,42 @@
         include 'partial/_alert_2.php';
 
         if ($_SERVER['REQUEST_METHOD']) {
-            session_start();
-            include '_dbConnect.php';
+            include 'partial/_dbConnect.php';
         
-            $loginEmail=$_POST['loginEmail'];
-            $loginPass=$_POST['loginPass'];
-            $loginConfPass=$_POST['loginConfPass'];
-            
-            $checkUser="SELECT * FROM `users` WHERE userEmail='$loginEmail'";
+            $id_num=$_POST['id_num'];
+            $checkUser="SELECT * FROM `Book_slot` WHERE id_num='$id_num'";
             $result=mysqli_query($conn,$checkUser);
             $noOfRows=mysqli_num_rows($result);
         
             if ($noOfRows==1) {
+                echo69;
 
             }
         }
         else{
             
         echo '
-        <form method="post" action="partial/adminHome.php">
-        <div class="container">
-       <center> <div class="select-box">
-        <select>
-            <option hidden>ID Proof</option>
-            <option>Aadhar</option>
-            <option>Pan Card</option>
-            <option>Voter ID</option>
-        </select>
-    </div></center>
+        <form method="post" action="adminHome.php">
+           <div class="container">
+            <center> <div class="select-box">
+              <select>
+               <option hidden>ID Proof</option>
+                <option>Aadhar</option>
+                 <option>Pan Card</option>
+                  <option>Voter ID</option>
+             </select>
+          </div></center>
     <input type="text" id="id_num" name="id_num" placeholder="Enter ID Proof number"  >
-    <input type="submit" value="Verify">
+        <input type="submit" value="Verify">
          
         </div>
-        </form>
+          </form>
     </section>
     ';
         }
     }
     ?>
-    
+
     <script src="/project/admin/js/logout.js"></script>
 </body>
 

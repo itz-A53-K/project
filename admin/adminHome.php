@@ -69,6 +69,13 @@
                 ';
 
             }
+            else{
+                echo '
+                <div class="container">
+                    <h2>No booking found.</h2>
+                </div>
+                ';
+            }
         }
         else{
             

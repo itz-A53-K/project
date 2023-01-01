@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/header_footer.css">
+    <link rel="stylesheet" href="/project/css/edit.css">
     <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/adminhome.css">
 </head>
@@ -36,8 +37,44 @@
             $noOfRows=mysqli_num_rows($result);
         
             if ($noOfRows==1) {
-                echo'69';
+                echo'
+                <div class="container">
+                    <div class="titleCard">
+                        <div class="sno">S. No.</div>
+                        <div class="name">Name</div>
+                        <div class="date">Vaccination Date</div>
+                        <div class="cname">Center</div>
+                        <div class="btndiv">Action</div>
+                    </div>
+                    ';
+                   
+                    while($row=mysqli_fetch_assoc($result)){
+                    
+                    echo '
+                    
+                        <div class="card">
+                            <div class="sno"></div>
+                            <div class="name">'.$row['name'].'</div>
+                            <div class="date">'.$row['date'].'</div>
+                            <div class="cname">'.$row['vacCenter'].',&nbsp;'.$row['vacDist'].'</div>
+                            <div class="btndiv">
+                                <button class="btn edit" id="">Accept</button>
+                                <button class="btn delete" id="">Reject</button>
+                            </div>
+                        </div>
+                    ';
+                    }
+                    echo '
+                </div>
+                ';
 
+            }
+            else{
+                echo '
+                <div class="container">
+                    <h2>No booking found.</h2>
+                </div>
+                ';
             }
         }
         else{

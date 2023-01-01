@@ -46,6 +46,7 @@
         else{
             
         echo '
+        <form method="post" action="partial/adminHome.php">
         <div class="container">
        <center> <div class="select-box">
         <select>
@@ -59,6 +60,7 @@
     <input type="submit" value="Verify">
          
         </div>
+        </form>
     </section>
     ';
         }

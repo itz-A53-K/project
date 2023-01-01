@@ -22,7 +22,6 @@
         }
         else{
             echo '
-  ?>
     <section class="body">
         ';
         include 'partial/_alert_2.php';

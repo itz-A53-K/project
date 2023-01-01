@@ -53,7 +53,8 @@
                  <option>Pan Card</option>
                   <option>Voter ID</option>
              </select>
-          </div></center>
+          </div>
+             </center>
 
     <input type="text" id="id_num" name="id_num" placeholder="Enter ID Proof number"  >
         <input type="submit" value="Verify">

@@ -27,6 +27,24 @@
         ';
         include 'partial/_alert_2.php';
 
+        if ($_SERVER['REQUEST_METHOD']) {
+            session_start();
+            include '_dbConnect.php';
+        
+            $loginEmail=$_POST['loginEmail'];
+            $loginPass=$_POST['loginPass'];
+            $loginConfPass=$_POST['loginConfPass'];
+            
+            $checkUser="SELECT * FROM `users` WHERE userEmail='$loginEmail'";
+            $result=mysqli_query($conn,$checkUser);
+            $noOfRows=mysqli_num_rows($result);
+        
+            if ($noOfRows==1) {
+
+            }
+        }
+        else{
+            
         echo '
         <div class="container">
        <center> <div class="select-box">
@@ -43,6 +61,7 @@
         </div>
     </section>
     ';
+        }
     }
     ?>
     

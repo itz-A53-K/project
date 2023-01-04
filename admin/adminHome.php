@@ -58,8 +58,17 @@
                             <div class="date">'.$row['date'].'</div>
                             <div class="cname">'.$row['vacCenter'].',&nbsp;'.$row['vacDist'].'</div>
                             <div class="btndiv">
-                                <button class="btn edit" id="">Accept</button>
-                                <button class="btn delete" id="">Reject</button>
+                                <form action="partial/_varifyFunctional.php" method="post">
+                                    <input type="hidden" name="slot_id" value="'.$row['slot_id'].'">
+                                    <input type="hidden" name="btnValue" value="accept">
+                                    <button type="submit" class="btn edit" id="">Accept</button>
+                                </form>
+                                <form action="partial/_varifyFunctional.php" method="post">
+                                    <input type="hidden" name="slot_id" value="'.$row['slot_id'].'">
+                                    <input type="hidden" name="btnValue" value="reject">
+                                    <button type="submit" class="btn delete" id="">Reject</button>
+                                </form>
+
                             </div>
                         </div>
                     ';

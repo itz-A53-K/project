@@ -53,7 +53,7 @@
                                     <div class="date">'.$row['date'].'</div>
                                     <div class="cname">'.$row['vacCenter'].',&nbsp;'.$row['vacDist'].'</div>
                                     <div class="btndiv">
-                                        <button class="btn edit" id="">Edit</button>
+                                        <button class="btn edit" id=""><a href="update.php?id=$sNo&fn=$row[name]&dn=$row[date]&vc=$row[vacCenter]&vd=$row[vacDist]">Edit</button></a>
                                         <button class="btn delete" id="">Cancel</button>
                                     </div>
                                 </div>

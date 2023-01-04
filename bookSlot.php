@@ -1,4 +1,6 @@
-<!-- by ak -->
+<?php
+ session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -151,7 +153,18 @@
                         </div>
                         <div class="input-box">
                             <label for="date"> Date</label>
-                            <input type="date"  name="date" id="date" placeholder="Enter date"  >
+                            <input type="date"  name="date" id="date" placeholder="Enter date" 
+                            min=
+                            <?php 
+							$todays_date=date("Y-m-d"); 
+							echo $todays_date;
+						?>
+                        max=
+						<?php 
+							$max_date=date_create(date("Y-m-d"));
+							date_add($max_date,date_interval_create_from_date_string("150 days")); 
+							echo date_format($max_date,"Y-m-d");
+						?> >
                         </div>
                         <div class="input-box">
                             <label for="dose">Vaccine dose</label>

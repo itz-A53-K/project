@@ -88,6 +88,7 @@
 
     <!-- <a href="#body" class="goToTop" id="goToTop"><button >Go To Top</button></a> -->
     <script src="/project/admin/js/logout.js"></script>
+    <script src="/project/script.js"></script>
 </body>
 
 </html>

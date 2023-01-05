@@ -56,7 +56,7 @@
         <h1>Copyright &copy;Coid win.com</h1>
         <p>Designed & developed by: Mamud, Mahibul.</p>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -32,7 +32,7 @@
             include 'partial/_dbConnect.php';
         
             $id_num=$_POST['id_num'];
-            $checkUser="SELECT * FROM `book_slot` WHERE id_num='$id_num'";
+            $checkUser="SELECT * FROM `book_slot` WHERE id_num='$id_num' and status=''";
             $result=mysqli_query($conn,$checkUser);
             $noOfRows=mysqli_num_rows($result);
         
@@ -114,6 +114,7 @@
     ?>
 
     <script src="/project/admin/js/logout.js"></script>
+    <script src="/project/script.js"></script>
 </body>
 
 </html>

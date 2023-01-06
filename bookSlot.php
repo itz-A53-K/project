@@ -178,7 +178,7 @@
     </footer>
     <script src="/project/js/bookSlot.js"></script>
     <script src="/project/js/logout.js"></script>
-    <script src="/project/js/script.js"></script>
+    <script src="/project/script.js"></script>
 </body>
 
 </html>

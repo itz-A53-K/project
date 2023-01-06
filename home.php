@@ -88,7 +88,7 @@
         <p>Designed & developed by: Mamud, Mahibul.</p>
     </footer>
     <script src="/project/js/logout.js"></script>
-    <script src="/project/js/script.js"></script>
+    <script src="/project/script.js"></script>
 </body>
 
 </html>

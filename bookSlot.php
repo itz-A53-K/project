@@ -1,6 +1,4 @@
-<?php
- session_start();
- ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -153,18 +151,7 @@
                         </div>
                         <div class="input-box">
                             <label for="date"> Date</label>
-                            <input type="date"  name="date" id="date" placeholder="Enter date" 
-                            min=
-                            <?php 
-							$todays_date=date("Y-m-d"); 
-							echo $todays_date;
-						?>
-                        max=
-						<?php 
-							$max_date=date_create(date("Y-m-d"));
-							date_add($max_date,date_interval_create_from_date_string("150 days")); 
-							echo date_format($max_date,"Y-m-d");
-						?> >
+                            <input type="date"  name="date" id="date" placeholder="Enter date">
                         </div>
                         <div class="input-box">
                             <label for="dose">Vaccine dose</label>
@@ -189,24 +176,6 @@
         <h1>Copyright &copy; Covid win.com</h1>
         <p>Designed & developed by: Mamud, Mahibul.</p>
     </footer>
-    <!-- <script>
-        
-        // if(document.)
-
-        function checkDate() {
-            const givenDateInput = document.getElementById('givenDateInput');
-            const currentDate = new Date(); // current date and time
-            const givenDate = new Date(givenDateInput.value); // given date
-            console.log(givenDate);
-            if (givenDate < currentDate) {
-                console.log(blaaaa);
-                alert('Fuck off')
-                return false;
-            } else {
-                return true;
-            }
-        }
-    </script> -->
     <script src="/project/js/bookSlot.js"></script>
     <script src="/project/js/logout.js"></script>
     <script src="/project/js/script.js"></script>

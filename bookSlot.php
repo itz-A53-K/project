@@ -151,7 +151,7 @@
                         </div>
                         <div class="input-box">
                             <label for="date"> Date</label>
-
+                            <input type="date"  name="date" id="date" placeholder="Enter date" >
                         </div>
                         <div class="input-box">
                             <label for="dose">Vaccine dose</label>

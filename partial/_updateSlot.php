@@ -25,14 +25,14 @@ session_start();
     $user_id=$_SESSION['user_id'];
 
     // $address= "streetName= ".$streetName.", dist= ".$district.", PS= ".$ps.", PO= ".$po.", pinc= ".$pinc ;
-$address ="";
+// $address ="";
 // echo $address;
     $check_slot="SELECT * FROM `book_slot` WHERE slot_id='$slot_id'";
     $check_slot_result=mysqli_query($conn,$check_slot);
     $check_slot_num_rows=mysqli_num_rows($check_slot_result);
     //check if slot already booked 
     if ($check_slot_num_rows==1){
-        $sql="UPDATE `book_slot` SET `name`='$name', `email`='$email', `phNo`='$phNo', `gender`='$gender', `address`='$address', `id_num`='$id_num', `g_name`='$g_name', `g_ph`='$g_ph', `vacDist`='$vacDist', `vacCenter`='$vacCenter', `date`='$date', `dose`='$dose',`age`='$age' WHERE `book_slot`. slot_id=$slot_id";
+        $sql="UPDATE `book_slot` SET `name`='$name', `email`='$email', `phNo`='$phNo', `gender`='$gender', `id_num`='$id_num', `g_name`='$g_name', `g_ph`='$g_ph', `vacDist`='$vacDist', `vacCenter`='$vacCenter', `date`='$date', `dose`='$dose',`age`='$age' WHERE `book_slot`. slot_id=$slot_id";
         $result=mysqli_query($conn,$sql);
 
         if ($result) {

@@ -77,7 +77,7 @@
                         <label for="streetName">Address</label>
                         <input type="text" id="streetName" name="streetName" placeholder="Enter street name"  >
                         <div class="column">
-                            <input type="text" id="district" name="street name" placeholder="District"  >
+                            <input type="text" id="district" name="district" placeholder="District"  >
                             <input type="text" id="ps" name="ps" placeholder="Police Station"  >
                         </div>
                         <div class="column">
@@ -153,18 +153,8 @@
                         </div>
                         <div class="input-box">
                             <label for="date"> Date</label>
-                            <input type="date"  name="date" id="date" placeholder="Enter date" 
-                            min=
-                            <?php 
-							$todays_date=date("Y-m-d"); 
-							echo $todays_date;
-						?>
-                        max=
-						<?php 
-							$max_date=date_create(date("Y-m-d"));
-							date_add($max_date,date_interval_create_from_date_string("150 days")); 
-							echo date_format($max_date,"Y-m-d");
-						?> >
+                            <input type="date"  name="date" id="date" placeholder="Enter date" >
+                            
                         </div>
                         <div class="input-box">
                             <label for="dose">Vaccine dose</label>

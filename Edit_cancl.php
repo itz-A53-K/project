@@ -32,6 +32,7 @@
                         <div class="titleCard">
                             <div class="sno">S. No.</div>
                             <div class="name">Name</div>
+                            <div class="email">Email</div>
                             <div class="date">Vaccination Date</div>
                             <div class="cname">Center</div>
                             <div class="btndiv">Action</div>
@@ -40,24 +41,48 @@
                         $user_id=$_SESSION['user_id'];
                         $sql="SELECT * FROM `book_slot` WHERE user_id=$user_id";
                         $result=mysqli_query($conn,$sql);
+                        $no_of_rows=mysqli_num_rows($result);
                         $sNo=0;
 
-                        // echo $user_id;
-                        while($row=mysqli_fetch_assoc($result)){
-                            $sNo=$sNo+1;
-                            echo '
-                            
-                                <div class="card">
-                                    <div class="sno">'.$sNo.'</div>
-                                    <div class="name">'.$row['name'].'</div>
-                                    <div class="date">'.$row['date'].'</div>
-                                    <div class="cname">'.$row['vacCenter'].',&nbsp;'.$row['vacDist'].'</div>
-                                    <div class="btndiv">
-                                        <button class="btn edit" id=""><a href="update.php?id=$sNo&fn=$row[name]&dn=$row[date]&vc=$row[vacCenter]&vd=$row[vacDist]">Edit</button></a>
-                                        <button class="btn delete" id="">Cancel</button>
+                        if($no_of_rows==0){
+                            echo '<center><h1 style="font-size: 2rem; margin:5vh 2vw;"> No Booking Found.</h1></center>';
+                        }
+                        else{
+                            // echo $user_id;
+                            while($row=mysqli_fetch_assoc($result)){
+                                $sNo=$sNo+1;
+                                echo '
+                                
+                                    <div class="card">
+                                        <div class="sno">'.$sNo.'</div>
+                                        <div class="name">'.$row['name'].'</div>
+                                        <div class="email">'.$row['email'].'</div>
+                                        <div class="date">'.$row['date'].'</div>
+                                        <div class="cname">'.$row['vacCenter'].',&nbsp;'.$row['vacDist'].'</div>
+                                        <div class="btndiv">';
+
+                                        if($row['status']!="accepted"){
+                                            echo'
+                                            <form action="partial/_update.php" method="post">
+                                                <input type="hidden" name="slot_id" value="'.$row['slot_id'].'">
+                                                <button type="submit" class="btn edit" id="">Edit</button>
+                                            </form>
+                                            
+                                            
+                                            <input type="hidden" id="slot_id" value="'.$row['slot_id'].'">
+                                            <button type="submit" class="btn delete" id="cancleBooking">Cancel</button>
+                                            ';
+                                        }
+                                        else if($row['status']=="accepted"){
+                                            echo '
+                                            <a href="/project/certificate/certi.php" class="getCerti">Get Certificate</a>
+                                            ';
+                                        }
+                                        echo '
+                                        </div>
                                     </div>
-                                </div>
-                            ';
+                                ';
+                            }
                         }
                         echo '
                     </div>
@@ -67,6 +92,16 @@
     ?>
     <script src="/project/js/logout.js"></script>
     <script src="/project/script.js"></script>
+    <script>
+        slot_id = document.getElementById('slot_id').value
+        cancleBooking = document.getElementById('cancleBooking')
+
+        cancleBooking.addEventListener("click", (e) => {
+            if (confirm("Do you really want to cancel the booking?")) document.location = 'http://localhost/project/partial/_deleteSlot.php?slot_id='+slot_id;
+
+        })
+    </script>
+
 </body>
 
 </html>

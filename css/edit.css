@@ -3,6 +3,10 @@
 	padding: 0;
 	font-size: 18px;
 }
+a{
+	text-decoration: none;
+	color: black;
+}
 .body{
 	margin-top: 9vh;
 	background: linear-gradient(120deg,#2980b9, #8e44ad);
@@ -32,23 +36,28 @@
 }
 
 .sno {
-	width: 4vw;
+	width: 3vw;
 	padding: 0 5px;
 }
 
 .name {
 	margin: 5px;
-	width: 15vw;
+	width: 13vw;
 }
-
-.date {
+.email {
 	margin: 5px;
 	width: 20vw;
 }
 
+.date {
+	text-align: center;
+	margin: 5px;
+	width: 10vw;
+}
+
 .cname {
 	margin: 5px;
-	width: 45vw;
+	width: 35vw;
 }
 
 .btndiv {
@@ -68,11 +77,25 @@
 font-size: .9rem;
 
 }
+.btndiv .getCerti{
+	
+	margin: 4px;
+    padding: 5px 30px;
+    color: black;
+    background: linear-gradient(120deg,#d5127d, #0b81e9);
+    border: none;
+    border-radius: 15px;
+    transition: .2s ease-in;
+	color: white;
+}
+
 .btndiv .edit {
+	padding: 5px 20px;
 	background-color: rgb(27, 225, 27);
 	
 }
 .btndiv .delete {
+	padding: 5px 20px;
 	background-color: rgba(238, 5, 5, 0.848);
 	
 }

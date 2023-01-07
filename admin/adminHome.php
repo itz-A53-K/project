@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/header_footer.css">
-    <link rel="stylesheet" href="/project/css/edit.css">
+    <!-- <link rel="stylesheet" href="/project/css/edit.css"> -->
     <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="css/adminhome.css">
 </head>
@@ -40,10 +40,12 @@
                 echo'
                 <div class="container">
                     <div class="titleCard">
-                        <div class="sno">S. No.</div>
+                       
                         <div class="name">Name</div>
                         <div class="date">Vaccination Date</div>
                         <div class="cname">Center</div>
+                        <div class="address">Address</div>
+                        <div class="g_name">Guardian Name</div>
                         <div class="btndiv">Action</div>
                     </div>
                     ';
@@ -53,10 +55,12 @@
                     echo '
                     
                         <div class="card">
-                            <div class="sno"></div>
+                            
                             <div class="name">'.$row['name'].'</div>
                             <div class="date">'.$row['date'].'</div>
                             <div class="cname">'.$row['vacCenter'].',&nbsp;'.$row['vacDist'].'</div>
+                            <div class="address">'.$row['address'].'</div>
+                            <div class="g_name">'.$row['g_name'].'</div>
                             <div class="btndiv">
                                 <form action="partial/_varifyFunctional.php" method="post">
                                     <input type="hidden" name="slot_id" value="'.$row['slot_id'].'">
@@ -91,7 +95,7 @@
         echo '
         <form method="post" action="adminHome.php">
 
-           <div class="container">
+           <div class="formContainer">
             <center> <div class="select-box">
               <select>
                <option hidden>ID Proof</option>

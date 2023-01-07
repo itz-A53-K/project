@@ -22,30 +22,39 @@
                     $email=$_POST['email'];
                     $sql="SELECT * FROM `book_slot` WHERE email='$email'";
                     $result=mysqli_query($conn,$sql);
-
+                    
+                    $row=mysqli_fetch_assoc($result);
+                    
                     if(mysqli_num_rows($result)==1){
-                        $row=mysqli_fetch_assoc($result);
+                       
+                        if($row['status']=='accepted'){
                         
-                        echo '
+                            echo '
 
-                        <input type="hidden" id="name" value="'.$row['name'].'">
-                        <input type="hidden" id="age" value="'.$row['age'].'">
-                        <input type="hidden" id="gender" value="'.$row['gender'].'">
-                        <input type="hidden" id="idProof" value="'.$row['id_num'].'">
-                        <input type="hidden" id="dose" value="'.$row['dose'].'">
-                        <input type="hidden" id="date" value="'.$row['date'].'">
-                        <input type="hidden" id="vacAddress" value="'.$row['vacCenter'].',&nbsp;'.$row['vacDist'].'">
+                            <input type="hidden" id="name" value="'.$row['name'].'">
+                            <input type="hidden" id="age" value="'.$row['age'].'">
+                            <input type="hidden" id="gender" value="'.$row['gender'].'">
+                            <input type="hidden" id="idProof" value="'.$row['id_num'].'">
+                            <input type="hidden" id="dose" value="'.$row['dose'].'">
+                            <input type="hidden" id="date" value="'.$row['date'].'">
+                            <input type="hidden" id="vacAddress" value="'.$row['vacCenter'].',&nbsp;'.$row['vacDist'].'">
 
 
-                        <canvas id="canvas" height="450px" width="500px"></canvas>
+                            <canvas id="canvas" height="450px" width="500px"></canvas>
 
-                         <button onClick="download()" id="download_btn" class="btn">Download</button>
-                        ';
+                            <button onClick="download()" id="download_btn" class="btn">Download</button>
+                            ';
+                            
+                        }
+                        else{
+                            session_start();
+                            $_SESSION['alert']="Your vaccination is not completed yet.";;
+                            header('Location: /project/home.php');
+                        }
                     }
                     else{
-                        $alert="No vaccine details found for the email : `$email`.";
                         session_start();
-                        $_SESSION['alert']=$alert;
+                        $_SESSION['alert']="No vaccine details found for the email : `$email`.";
                         header('Location: /project/home.php');
                     }
                

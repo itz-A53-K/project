@@ -30,14 +30,40 @@ session_start();
     $check_slot_num_rows=mysqli_num_rows($check_slot_result);
     //check if slot already booked (corresponding to phno and dose)
     if ($check_slot_num_rows==0){
-        $sql="INSERT INTO `book_slot` ( `name`, `email`, `phNo`, `gender`, `address`, `id_num`, `g_name`, `g_ph`, `vacDist`, `vacCenter`, `date`, `dose`,`age`,`user_id`) VALUES ( '$name', '$email', '$phNo', '$gender', '$address', '$id_num', '$g_name', '$g_ph', '$vacDist', '$vacCenter', '$date', '$dose','$age','$user_id')";
-        $result=mysqli_query($conn,$sql);
+        $vac_dist_wise="SELECT * FROM `vaccine_dist_wise` WHERE dist_name='$vacDist'";
+        $vac_dist_wise_result=mysqli_query($conn,$vac_dist_wise);
 
-        if ($result) {
-            $alert= 'Your slot has been booked successfully';
+        $vac_dist_wise_row=mysqli_fetch_assoc($vac_dist_wise_result);
+        
+        if($vac_dist_wise_row['stock']>0){
+
+            if($vac_dist_wise_row['slot']>0){
+
+                $sql="INSERT INTO `book_slot` ( `name`, `email`, `phNo`, `gender`, `address`, `id_num`, `g_name`, `g_ph`, `vacDist`, `vacCenter`, `date`, `dose`,`age`,`user_id`) VALUES ( '$name', '$email', '$phNo', '$gender', '$address', '$id_num', '$g_name', '$g_ph', '$vacDist', '$vacCenter', '$date', '$dose','$age','$user_id')";
+                $result=mysqli_query($conn,$sql);
+
+                if ($result) {
+                    $slot=$vac_dist_wise_row['slot']-1;
+                    
+                    $update="UPDATE `vaccine_dist_wise` set `slot`='$slot' WHERE `vaccine_dist_wise` .dist_name='$vacDist'";
+                    $update_result=mysqli_query($conn,$update);
+                    
+                    if($update_result){
+                        $alert= 'Your slot has been booked successfully';
+                    }
+                }
+                else{
+                    $alert= 'slot book error';
+                }
+            }
+            else{
+                $alert= 'No slot available';
+                
+            }
         }
         else{
-            $alert= 'slot book error';
+            $alert= 'Vaccine is out of stock in your district';
+
         }
     }
     else{

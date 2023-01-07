@@ -14,13 +14,13 @@ if(document.querySelector('#name').value =="" || document.querySelector('#email'
     alert('Please fill all the field');
     return false;
 }
-else if(givenDate.getFullYear()<currentDate.getFullYear() || givenDate.getMonth()<currentDate.getMonth() ||givenDate.getDate()<currentDate.getDate()){
-    alert('blaaaa');
-    return false;
-}
-else{
-    // alert('blaaaa22222');
-    return true;
+// else if(givenDate.getFullYear()<currentDate.getFullYear() || givenDate.getMonth()<currentDate.getMonth() ||givenDate.getDate()<currentDate.getDate()){
+//     alert('blaaaa');
+//     return false;
+// }
+// else{
+//     // alert('blaaaa22222');
+//     return true;
 
-}
+// }
 }

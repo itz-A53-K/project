@@ -37,7 +37,7 @@
                             <input type="hidden" id="idProof" value="'.$row['id_num'].'">
                             <input type="hidden" id="dose" value="'.$row['dose'].'">
                             <input type="hidden" id="date" value="'.$row['date'].'">
-                            <input type="hidden" id="vacAddress" value="'.$row['vacCenter'].',&nbsp;'.$row['vacDist'].'">
+                            <input type="hidden" id="vacAddress" value="'.$row['vacCenter'].'">
 
 
                             <canvas id="canvas" height="450px" width="500px"></canvas>

@@ -84,8 +84,8 @@
         </div>
     </section>
     <footer>
-        <h1>Copyright &copy; Covid win.com</h1>
-        <p>Designed & developed by: Mamud, Mahibul.</p>
+        <h1>Copyright &copy; https://youtube.com/@projecthub.01</h1>
+        <p>Designed & developed by: projecthub.01.</p>
     </footer>
     <script src="/project/js/logout.js"></script>
     <script src="/project/script.js"></script>
